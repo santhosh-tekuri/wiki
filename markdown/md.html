@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Sanhosh's Wiki</title>
+  <script src="/markdown/marked.js"></script>
+
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,700,300italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Anonymous+Pro' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/markdown/md.css">
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+      displayAlign: "left"
+    });
+  </script>
+  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script type="text/javascript" src="/markdown/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+  <div id="markdown">%s</div>
+  <script>
+    marked.setOptions({
+        highlight: function (code, lang) {
+            return hljs.highlightAuto(code, [lang]).value;
+        }
+    });
+
+    var elem = document.getElementById('markdown');
+    elem.innerHTML = marked(elem.textContent);
+
+    $('a[href*="https://www.youtube.com/v/"]').replaceWith(function(){
+      return $("<embed width='420' height='315' src='"+$(this).attr("href")+"''></embed>");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body {
+  background-color: LightGray;
+  font-family: Lato, sans-serif;
+}
+
+#markdown {
+  color: #444;
+  font-size: 14px;
+  width: 63%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  box-shadow: 0 1px 5px #aaa;
+  padding: 0px 15px 5px 15px;
+}
+
+#markdown h1{
+  background: Indigo;
+  color: white;
+  margin: 0 -15px;
+  padding-left: 15px;
+}
+
+#markdown pre code {
+  color: #000;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.88em;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+  padding: 5px 3px 5px 3px;
+  display: block;
+}
+
+#markdown code {
+  color: #000;
+  font-family: 'Anonymous Pro', monospace;
+  font-size: 0.88em;
+  border-radius: 3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+  padding: 1px 3px 1px 3px;
+}
+
+#markdown h1 {
+  font-size: 2.5em;
+}
+
+#markdown h2 {
+  font-size: 2em;
+  border-bottom: 1px solid silver;
+  margin-bottom: 0px;
+}
+
+#markdown p + ul {
+  margin-top: 0px;
+}
+
+#markdown blockquote {
+  margin: 0;
+}
+
+#markdown blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
